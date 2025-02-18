@@ -1,50 +1,52 @@
 from maquina_refrigerante import maquina_refri
 
-def test_validate_vending_machine_1() -> None:
-    sequence = ("100", "50", "50")
-    expected = "101"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+#Aceitacao
+def test_validar_maquina_refri_1() -> None:
+    cadeia = ("50", "25", "50", "100", "25", "50", "100")
+    esperado = "0011011"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado
 
-def test_validate_vending_machine_2() -> None:
-    sequence = ("100", "50", "50", "50", "50")
-    expected = "10101"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+def test_validar_maquina_refri_2() -> None:
+    cadeia = ("100", "50", "50", "50", "50")
+    esperado = "10101"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado
 
-def test_validate_vending_machine_3() -> None:
-    sequence = ("100", "50", "50", "50", "50", "50", "50", "50", "50", "50")
-    expected = "1010101010"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+def test_validar_maquina_refri_3() -> None:
+    cadeia = ("100", "50", "50", "50", "50", "50", "50", "50", "50", "50")
+    esperado = "1010101010"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado
 
-def test_validate_vending_machine_4() -> None:
-    sequence = ("25", "100", "25", "50")
-    expected = "0101"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+def test_validar_maquina_refri_4() -> None:
+    cadeia = ("25", "100", "25", "50")
+    esperado = "0101"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado
 
-def test_validate_vending_machine_5() -> None:
-    sequence = ("100", "100", "50", "50")
-    expected = "1111"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+#Rejeicao
+def test_validar_maquina_refri_5() -> None:
+    cadeia = ("100", "100", "50", "50")
+    esperado = "1111"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado
 
-def test_validate_vending_machine_6() -> None:
-    sequence = ("25", "25", "25", "25")
-    expected = "0010"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+def test_validar_maquina_refri_6() -> None:
+    cadeia = ("25", "25", "25", "25")
+    esperado = "0010"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado
 
-def test_validate_vending_machine_7() -> None:
-    sequence = ("25", "25", "50", "25")
-    expected = "0001"
-    result = maquina_refri.process_sequence(sequence)
-    print(f"\nSequence {sequence}: Expected: {expected}, Result: {result}")
-    assert result == expected
+def test_validar_maquina_refri_7() -> None:
+    cadeia = ("25", "25", "50", "25")
+    esperado = "0001"
+    resultado = maquina_refri.processar_cadeia(cadeia)
+    print(f"\nSequence: {cadeia}\nExpected: {esperado}, Result: {resultado}")
+    assert resultado == esperado

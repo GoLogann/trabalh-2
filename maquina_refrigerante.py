@@ -1,4 +1,4 @@
-from automato.base_automato import Automato, Transdutores
+from automato.base_automato import Transdutores
 
 estados = set(["0", "25", "50", "75", "100", "125", "150", "175"])
 alfabeto_entrada = set(['25', '50', '100'])
